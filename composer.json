@@ -1,0 +1,27 @@
+{
+    "name": "anax/comments",
+    "type": "library",
+    "description": "Anax comments module.",
+    "keywords": ["boilerplate", "framework", "mvc", "micro", "education"],
+    "homepage": "https://dbwebb.se/anax",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andre Johansson",
+            "email": "anjd16@student.bth.se",
+            "homepage": "https://dbwebb.se",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/canax/comments/issues"
+    },
+    "autoload": {
+        "psr-4": { 
+            "Anax\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.6"
+    }
+}
