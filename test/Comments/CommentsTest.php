@@ -31,7 +31,8 @@ class CommentsTest extends TestCase
         $this->assertEquals("Hej", $text->comment);
     }
 
-    public function testGetAllComment() {
+    public function testGetAllComment()
+    {
         self::$comments->getAllComments();
     }
 

@@ -10,7 +10,6 @@ class CommentsController implements InjectionAwareInterface
     use InjectionAwareTrait;
 
     private $db;
-    private $comments;
 
     public function init($database)
     {
