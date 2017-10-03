@@ -2,7 +2,7 @@
 
 $comment = $di->get("commentsController")->get($_GET['id']);
 
-if ($comment->comment_author !== $di->get("session")->get("user")['name']) {
+if ($comment->author !== $di->get("session")->get("user")['name']) {
     if ($di->get("session")->get("user")['role'] !== "admin") {
         $di->get("response")->redirect("404");
     }

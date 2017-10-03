@@ -10,6 +10,8 @@
 
 if ($di->get("session")->get("user") !== null) {
     $di->get("commentsController")->addCommentSection();
+} else { ?>
+    <p>Du måste <a href="<?=$di->get("url")->create("user/login")?>">logga in</a> för att kommentera.</p><?php
 }
 
 ?>
