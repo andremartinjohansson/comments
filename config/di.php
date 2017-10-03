@@ -117,6 +117,14 @@ return [
                 return $obj;
             }
         ],
+        "db" => [
+            "shared" => true,
+            "callback" => function () {
+                $obj = new \Anax\Database\DatabaseQueryBuilder();
+                $obj->configure("database.php");
+                return $obj;
+            }
+        ],
         "comments" => [
             "shared" => true,
             "callback" => function () {
@@ -130,6 +138,7 @@ return [
             "callback" => function () {
                 $commentsController = new \Anax\Comments\CommentsController();
                 $commentsController->setDI($this);
+                $commentsController->init($this->get("db"));
                 return $commentsController;
             }
         ],

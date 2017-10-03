@@ -6,8 +6,6 @@ if ($comment->comment_author !== $di->get("session")->get("user")['name']) {
     if ($di->get("session")->get("user")['role'] !== "admin") {
         $di->get("response")->redirect("404");
     }
-    // var_dump($comment['comment_author']);
-    // var_dump($_SESSION['user']['name']);
 }
 
 $text = $comment->comment;

@@ -10,16 +10,40 @@ Anax comments
 [![Code Coverage](https://scrutinizer-ci.com/g/canax/comments/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/canax/comments/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/d831fd4c-b7c6-4ff0-9a83-102440af8929/mini.png)](https://insight.sensiolabs.com/projects/d831fd4c-b7c6-4ff0-9a83-102440af8929)
 
-Anax comments module.
+Anax module for system for comments
 
-
-
-Usage
+Installation
 ------------------
 
-Short examples on how to use the module comments.
+### Install with composer
 
+```
+composer require andymartinj/comments
+```
 
+### Copy view files
+
+```
+rsync -av -vendor/anax/comments/view/comments* view
+```
+
+The edit_comment.php view is necessary for editing comments. The comments.php is just for showing how you can add the comment section to a page.
+
+### Router files
+
+```
+rsync -av vendor/anax/comments/config/route/comments.php config/route
+```
+
+You need to include the router file in your router configuration `config/route.php`. There is a sample you can use in `vendor/anax/comments/config/route.php`.
+
+### DI services
+
+You need to add the services di configuration `config/di.php`. There is a sample you can use in `vendor/anax/comments/config/di.php`.
+
+### Database
+
+The system uses a database to store comments. There is a sample you can use in `vendor/anax/comments/data/comments.sqlite`.
 
 License
 ------------------
