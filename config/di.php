@@ -139,6 +139,7 @@ return [
                 $commentsController = new \Anax\Comments\CommentsController();
                 $commentsController->setDI($this);
                 $commentsController->init($this->get("db"));
+                $commentsController->inject($this->get("session"));
                 return $commentsController;
             }
         ],

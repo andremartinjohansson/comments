@@ -15,13 +15,13 @@ composer require andymartinj/comments
 ### Copy view files
 
 ```
-rsync -av -vendor/andymartinj/comments/view/comments* view
+rsync -av vendor/andymartinj/comments/view/comments* view
 ```
 ```
-rsync -av -vendor/andymartinj/comments/view/user* view
+rsync -av vendor/andymartinj/comments/view/user* view
 ```
 ```
-rsync -av -vendor/andymartinj/comments/view/admin* view
+rsync -av vendor/andymartinj/comments/view/admin* view
 ```
 
 The edit_comment.php view is necessary for editing comments. The comments.php is just for showing how you can add the comment section to a page.

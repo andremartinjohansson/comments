@@ -10,15 +10,22 @@ class CommentsController implements InjectionAwareInterface
     use InjectionAwareTrait;
 
     private $db;
+    private $session;
 
     public function init($database)
     {
         $this->db = $database;
     }
 
+    public function inject($session)
+    {
+        $this->session = $session;
+        return $this;
+    }
+
     public function add()
     {
-        $user = $this->di->get("session")->get("user");
+        $user = $this->session->get("user");
         $this->di->get("comments")->addComment($_POST, $this->db, $user);
         $this->di->get("response")->redirect("comments");
     }

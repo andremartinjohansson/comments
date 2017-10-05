@@ -46,7 +46,6 @@ class Comments
     public function addComment($vars, $db, $user)
     {
         $input = array(
-            'id' => $vars['id'],
             'article' => $vars['article'],
             'author' => $user["name"],
             'email' => $user["email"],
@@ -140,6 +139,7 @@ EOD;
             <h3>Skriv en kommentar</h3>
             <form action="{$post}" method="post">
             <input type="hidden" name="author" value="Anonymous">
+            <input type="hidden" name="article" value="1">
             <div class="compose-comment">
             <textarea class="comment-text" name="comment" required="required"></textarea>
             </div>
