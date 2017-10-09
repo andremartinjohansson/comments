@@ -33,6 +33,7 @@
         "anax/textfilter": "^1.0",
         "anax/url": "^1.0",
         "anax/view": "^1.0",
-        "anax/database": "^1.1"
+        "anax/database": "^1.1",
+        "anax/htmlform": "^1.0"
     }
 }
