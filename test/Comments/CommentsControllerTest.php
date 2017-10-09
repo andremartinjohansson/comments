@@ -25,6 +25,16 @@ class CommentsControllerTest extends TestCase
         self::$session->set("user", $loggedIn);
     }
 
+    public function testInit()
+    {
+        self::$comments->init(self::$db);
+    }
+
+    public function testInject()
+    {
+        self::$comments->inject(self::$session);
+    }
+
     public function testInstance()
     {
         $this->assertInstanceOf("Anax\Comments\CommentsController", self::$comments);

@@ -11,10 +11,12 @@ class CommentsController implements InjectionAwareInterface
 
     private $db;
     private $session;
+    private $response;
 
     public function init($database)
     {
         $this->db = $database;
+        $this->response = $this->di->get("response");
     }
 
     public function inject($session)
@@ -27,25 +29,19 @@ class CommentsController implements InjectionAwareInterface
     {
         $user = $this->session->get("user");
         $this->di->get("comments")->addComment($_POST, $this->db, $user);
-        if (!headers_sent()) {
-            $this->di->get("response")->redirect("comments");
-        }
+        // $this->response->redirect("comments");
     }
 
     public function delete()
     {
         $this->di->get("comments")->deleteComment($_GET['id'], $this->db);
-        if (!headers_sent()) {
-            $this->di->get("response")->redirect("comments");
-        }
+        // $this->response->redirect("comments");
     }
 
     public function edit()
     {
         $this->di->get("comments")->editComment($_POST['id'], $_POST['comment'], $this->db);
-        if (!headers_sent()) {
-            $this->di->get("response")->redirect("comments");
-        }
+        // $this->response->redirect("comments");
     }
 
     public function get($id)
