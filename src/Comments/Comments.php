@@ -46,6 +46,7 @@ class Comments
     public function addComment($vars, $db, $user)
     {
         $input = array(
+            'id' => ($this->commentCount() + 1),
             'article' => $vars['article'],
             'author' => $user["name"],
             'email' => $user["email"],
