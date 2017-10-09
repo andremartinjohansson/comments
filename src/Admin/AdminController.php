@@ -21,20 +21,6 @@ class AdminController implements
 {
     use ConfigureTrait, InjectionAwareTrait;
 
-
-
-    /**
-     * @var $data description
-     */
-    //private $data;
-
-
-
-    /**
-     * Show all items.
-     *
-     * @return void
-     */
     public function getIndex()
     {
         $title      = "All users";
