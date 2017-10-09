@@ -22,9 +22,8 @@ class UserEmailForm extends FormModel implements InjectionAwareInterface
      *
      * @param Anax\DI\DIInterface $di a service container
      */
-    public function __construct(DIInterface $di)
+    public function __construct()
     {
-        parent::__construct($di);
 
         $this->form->create(
             [
