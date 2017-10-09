@@ -6,24 +6,19 @@ use \Anax\HTMLForm\FormModel;
 use \Anax\DI\DIInterface;
 use \Anax\User\User;
 
-use \Anax\DI\InjectionAwareInterface;
-use \Anax\DI\InjectionAwareTrait;
-
 /**
  * Example of FormModel implementation.
  */
-class UserEmailForm extends FormModel implements InjectionAwareInterface
+class UserEmailForm extends FormModel
 {
-
-    use InjectionAwareTrait;
-
     /**
      * Constructor injects with DI container.
      *
      * @param Anax\DI\DIInterface $di a service container
      */
-    public function __construct()
+    public function __construct(DIInterface $di)
     {
+        parent::__construct($di);
 
         $this->form->create(
             [

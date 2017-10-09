@@ -6,17 +6,11 @@ use \Anax\HTMLForm\FormModel;
 use \Anax\DI\DIInterface;
 use \Anax\User\User;
 
-use \Anax\DI\InjectionAwareInterface;
-use \Anax\DI\InjectionAwareTrait;
-
 /**
  * Example of FormModel implementation.
  */
-class UserLoginForm extends FormModel implements InjectionAwareInterface
+class UserLoginForm extends FormModel
 {
-
-    use InjectionAwareTrait;
-
     /**
      * Constructor injects with DI container.
      *
