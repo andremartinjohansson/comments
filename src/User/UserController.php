@@ -2,31 +2,19 @@
 
 namespace Anax\User;
 
-use \Anax\Configure\ConfigureInterface;
-use \Anax\Configure\ConfigureTrait;
-use \Anax\DI\InjectionAwareInterface;
-use \Anax\Di\InjectionAwareTrait;
 use \Anax\User\HTMLForm\UserLoginForm;
 use \Anax\User\HTMLForm\CreateUserForm;
 use \Anax\User\HTMLForm\UserEmailForm;
 
+use \Anax\DI\InjectionAwareInterface;
+use \Anax\DI\InjectionAwareTrait;
+
 /**
  * A controller class.
  */
-class UserController implements
-    ConfigureInterface,
-    InjectionAwareInterface
+class UserController implements InjectionAwareInterface
 {
-    use ConfigureTrait, InjectionAwareTrait;
-
-
-
-    /**
-     * @var $data description
-     */
-    //private $data;
-
-
+    use InjectionAwareTrait;
 
     /**
      * Description.
