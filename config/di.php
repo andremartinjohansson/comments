@@ -143,21 +143,5 @@ return [
                 return $commentsController;
             }
         ],
-        "userController" => [
-            "shared" => true,
-            "callback" => function () {
-                $obj = new \Anax\User\UserController();
-                $obj->setDI($this);
-                return $obj;
-            }
-        ],
-        "adminController" => [
-            "shared" => true,
-            "callback" => function () {
-                $obj = new \Anax\Admin\AdminController();
-                $obj->setDI($this);
-                return $obj;
-            }
-        ],
     ],
 ];
