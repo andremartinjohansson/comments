@@ -38,14 +38,6 @@ return [
                 return $url;
             }
         ],
-        // "router" => [
-        //     "shared" => true,
-        //     "callback" => function () {
-        //         $router = new \Anax\Route\Router();
-        //         $router->setDI($this);
-        //         return $router;
-        //     }
-        // ],
         "router" => [
             "shared" => true,
             "callback" => function () {

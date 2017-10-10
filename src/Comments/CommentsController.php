@@ -29,19 +29,19 @@ class CommentsController implements InjectionAwareInterface
     {
         $user = $this->session->get("user");
         $this->di->get("comments")->addComment($_POST, $this->db, $user);
-        // $this->response->redirect("comments");
+        $this->response->redirect("comments");
     }
 
     public function delete()
     {
         $this->di->get("comments")->deleteComment($_GET['id'], $this->db);
-        // $this->response->redirect("comments");
+        $this->response->redirect("comments");
     }
 
     public function edit()
     {
         $this->di->get("comments")->editComment($_POST['id'], $_POST['comment'], $this->db);
-        // $this->response->redirect("comments");
+        $this->response->redirect("comments");
     }
 
     public function get($id)
